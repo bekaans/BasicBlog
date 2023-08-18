@@ -1,5 +1,4 @@
-# MyBlogWebsite
- ASP.NET MVC - N Layer Architect - Solid Design Patterns - OOP
+
 
 Hi This is my Blog Website and using ;
 
