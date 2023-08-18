@@ -28,15 +28,6 @@ namespace EntityLayer.Conctrete
         public string Message { get; set; }
 
 
-        // Content <=> Heading
-        public int HeadingID { get; set; }
-        public virtual Heading Heading { get; set; }
-
-
-        // Content <=> Writer
-
-        public int WriterID { get; set; }
-        public virtual Writer Writer { get; set; }
 
 
 

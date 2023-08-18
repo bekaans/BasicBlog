@@ -18,5 +18,8 @@ namespace EntityLayer.Conctrete
 
         public int HeadingID { get; set; }
         public virtual Heading Heading { get; set; }
+
+        public int? WriterID { get; set; }
+        public virtual Writer Writer { get; set; }
     }
 }

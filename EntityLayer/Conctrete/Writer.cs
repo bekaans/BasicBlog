@@ -31,5 +31,6 @@ namespace EntityLayer.Conctrete
         public string WriterPassword { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }
