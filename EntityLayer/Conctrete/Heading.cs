@@ -16,6 +16,7 @@ namespace EntityLayer.Conctrete
         public virtual Category Category { get; set; }
 
         public  ICollection<Content> Contents { get; set; }
-
+        public int WriterID { get; set; }
+        public virtual Writer Writer { get; set; }
     }
 }
