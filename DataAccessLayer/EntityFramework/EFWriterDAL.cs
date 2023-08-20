@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    internal class EFWriterDAL
+    public class EFWriterDAL
     {
     }
 }
