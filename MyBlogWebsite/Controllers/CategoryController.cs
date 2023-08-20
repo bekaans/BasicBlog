@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Conctrete;
@@ -7,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FluentValidation.Results;
+using FluentValidation;
 
 namespace MyBlogWebsite.Controllers
 {
@@ -32,6 +35,13 @@ namespace MyBlogWebsite.Controllers
         public ActionResult AddCategory(Category p)
         {
             //cm.CategoryAddBusinessLayer(p);
+            Category category = new Category();
+            CategoryValidatior cv = new CategoryValidatior();
+            ValidationResult results = cv.Validate(p);
+            if (results.IsValid)
+            {
+                cm.CategoryAddBL(category);
+            }
             return RedirectToAction("GetCategoryList");
         }
     }
