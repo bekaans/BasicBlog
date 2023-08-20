@@ -2,13 +2,46 @@
 @{
     Layout = null;
 }
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <h3>Blog Sitesi Ornek</h3>
 <br />
-<table>
+<table class="table table-hover">
     <tr>
-        <th>Category ID</th>
+        <th>ID</th>
         <th>Category Name</th>
         <th>Information</th>
         <th>Status</th>
+        <th>Update</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Education</td>
+        <td>Information</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Sports</td>
+        <td>Information sports..</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Books</td>
+        <td>Information books..</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Cinema</td>
+        <td>Information cinema..</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
     </tr>
 </table>
+<button class="btn btn-info">New Category</button>
+<button class="btn btn-info">Category List</button>
+<button class="btn btn-danger">Category Informations</button>
