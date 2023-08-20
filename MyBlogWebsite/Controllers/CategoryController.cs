@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
 using EntityLayer.Conctrete;
 using System;
 using System.Collections.Generic;
@@ -11,15 +12,15 @@ namespace MyBlogWebsite.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        CategoryManager cm= new CategoryManager();
+        CategoryManager cm= new CategoryManager(new EFCategoryDAL());
         public ActionResult Index()
         {
             return View();
         }
         public ActionResult GetCategoryList()
         {
-           // var categoryvalues = cm.GetAllBusinessLayer();
-           // return View(categoryvalues);
+            var categoryvalues = cm.GetList();
+            return View(categoryvalues);
         }
         [HttpGet]
         public ActionResult AddCategory() 
