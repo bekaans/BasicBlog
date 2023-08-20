@@ -18,8 +18,8 @@ namespace MyBlogWebsite.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBusinessLayer();
-            return View(categoryvalues);
+           // var categoryvalues = cm.GetAllBusinessLayer();
+           // return View(categoryvalues);
         }
         [HttpGet]
         public ActionResult AddCategory() 
@@ -29,7 +29,7 @@ namespace MyBlogWebsite.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            cm.CategoryAddBusinessLayer(p);
+            //cm.CategoryAddBusinessLayer(p);
             return RedirectToAction("GetCategoryList");
         }
     }
