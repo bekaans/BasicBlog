@@ -77,3 +77,16 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\obj\Debug\MyBlogWebsite.
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\obj\Debug\MyBlogWebsite.csproj.CopyComplete
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\obj\Debug\MyBlogWebsite.dll
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\obj\Debug\MyBlogWebsite.pdb
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\BusinessLayer.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\DataAccessLayer.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityLayer.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\BusinessLayer.pdb
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\BusinessLayer.dll.config
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\DataAccessLayer.pdb
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\DataAccessLayer.dll.config
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityLayer.pdb
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityLayer.dll.config
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.SqlServer.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.SqlServer.xml
