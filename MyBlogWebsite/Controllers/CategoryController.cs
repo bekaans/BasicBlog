@@ -10,6 +10,7 @@ using System.Web;
 using System.Web.Mvc;
 using FluentValidation.Results;
 using FluentValidation;
+using System.Collections.ObjectModel;
 
 namespace MyBlogWebsite.Controllers
 {
@@ -40,9 +41,17 @@ namespace MyBlogWebsite.Controllers
             ValidationResult results = cv.Validate(p);
             if (results.IsValid)
             {
-                cm.CategoryAddBL(category);
+                cm.CategoryAdd(p);
+                return RedirectToAction("GetCategoryList");
             }
-            return RedirectToAction("GetCategoryList");
+            else
+            {
+                foreach(var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }
