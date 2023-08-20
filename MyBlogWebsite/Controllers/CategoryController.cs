@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using EntityLayer.Conctrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,17 @@ namespace MyBlogWebsite.Controllers
         {
             var categoryvalues = cm.GetAllBusinessLayer();
             return View(categoryvalues);
+        }
+        [HttpGet]
+        public ActionResult AddCategory() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddCategory(Category p)
+        {
+            cm.CategoryAddBusinessLayer(p);
+            return RedirectToAction("GetCategoryList");
         }
     }
 }
