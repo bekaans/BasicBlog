@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using DataAccessLayer.Repositories;
 using EntityLayer.Conctrete;
 using System;
@@ -22,6 +23,10 @@ namespace BusinessLayer.Concrete
         public List<Category> GetList()
         {
             return _icategorydal.List();
+        }
+        public void CategoryAddBL(Category category)
+        {
+           _icategorydal.Insert(category);
         }
     }
 }
