@@ -16,3 +16,9 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\obj\Debug\BusinessLayer.
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\bin\Debug\FluentValidation.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\BusinessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml

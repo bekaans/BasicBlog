@@ -14,8 +14,8 @@ namespace BusinessLayer.ValidationRules
         {
             RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Do Not Pass Category Name Empty");
             RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Do Not Pass Category Description Empty");
-            RuleFor(x => x.CategoryDescription).MinimumLength(3).WithMessage("Minimum 3 charachter");
-            RuleFor(x => x.CategoryDescription).MaximumLength(20).WithMessage("Maximum 20 charachter");
+            RuleFor(x => x.CategoryName).MinimumLength(3).WithMessage("Minimum 3 charachter");
+            RuleFor(x => x.CategoryName).MaximumLength(20).WithMessage("Maximum 20 charachter");
         }
 
     }

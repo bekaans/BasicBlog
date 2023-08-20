@@ -24,7 +24,7 @@ namespace BusinessLayer.Concrete
         {
             return _icategorydal.List();
         }
-        public void CategoryAddBL(Category category)
+        public void CategoryAdd(Category category)
         {
            _icategorydal.Insert(category);
         }

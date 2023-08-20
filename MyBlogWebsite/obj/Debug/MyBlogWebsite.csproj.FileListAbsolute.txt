@@ -90,3 +90,9 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityLayer.dll.conf
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.xml
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.SqlServer.dll
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\EntityFramework.SqlServer.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\FluentValidation.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\FluentValidation.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Threading.Tasks.Extensions.xml
