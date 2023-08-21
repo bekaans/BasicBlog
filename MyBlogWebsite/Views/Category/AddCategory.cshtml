@@ -2,9 +2,9 @@
 @{
     Layout = null;
 }
-
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
-            {<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+            {
                 <div class="form-group">
                     @Html.Label("Category Name")
                     @Html.TextBoxFor(x=>x.CategoryName)

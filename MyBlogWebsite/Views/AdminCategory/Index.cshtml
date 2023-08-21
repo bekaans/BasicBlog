@@ -5,4 +5,25 @@
 }
 
 <h2>Index</h2>
-
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+     
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Header</th>
+    </tr>
+    @foreach (var category in Model)
+    {
+        <tr>
+            <td>@category.CategoryID</td>
+            <td>@category.CategoryName</td>
+           
+            <td><a href="#"class="btn btn-danger">Delete</a></td>
+            <td><a href="#"class="btn btn-warning">Update</a></td>
+            <td><a href="#"class="btn btn-primary">Header</a></td>
+        </tr>
+    }
+</table>
+<a href="/AdminCategory/AddCategory"<button class="btn btn-info">Add Category</button>
