@@ -11,7 +11,7 @@ namespace DataAccessLayer.Abstract
     public interface IRepository<T>
     {
         List<T> List();
-
+        T Get(Expression<Func<T, bool>> filter);
         //Crud Operations
         void Insert(T p);
         void Update(T p);
