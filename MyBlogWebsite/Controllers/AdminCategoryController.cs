@@ -44,5 +44,13 @@ namespace MyBlogWebsite.Controllers
             }
            return View();
         }
+       
+        public ActionResult DeleteCategory(int id)
+        {
+            var categoryvalue=cm.GetById(id);
+            cm.CategoryRemove(categoryvalue);
+            return RedirectToAction("Index");
+        }
+      
     }
 }

@@ -9,7 +9,7 @@
     <tr>
         <th>ID</th>
         <th>Category Name</th>
-     
+
         <th>Delete</th>
         <th>Update</th>
         <th>Header</th>
@@ -19,10 +19,10 @@
         <tr>
             <td>@category.CategoryID</td>
             <td>@category.CategoryName</td>
-           
-            <td><a href="#"class="btn btn-danger">Delete</a></td>
-            <td><a href="#"class="btn btn-warning">Update</a></td>
-            <td><a href="#"class="btn btn-primary">Header</a></td>
+
+            <td><a href="/AdminCategory/DeleteCategory/@category.CategoryID" class="btn btn-danger">Delete</a></td>
+            <td><a href="#" class="btn btn-warning">Update</a></td>
+            <td><a href="#" class="btn btn-primary">Header</a></td>
         </tr>
     }
 </table>
