@@ -39,9 +39,16 @@ namespace BusinessLayer.Concrete
            _iwriterDAL.Delete(writer);
         }
 
+      
+
         public void WriterUpdate(Writer writer)
         {
             _iwriterDAL.Update(writer);
+        }
+
+        public void WriterUpdate()
+        {
+            throw new NotImplementedException();
         }
     }
 }
