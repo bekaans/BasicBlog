@@ -21,14 +21,14 @@ namespace MyBlogWebsite.Controllers
             return View(categoryvalues);
         }
         [HttpGet]
-        public ActionResult AddCategory() 
+        public ActionResult AddCategory()
         {
-                return View();
+            return View();
         }
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            CategoryValidatior cv= new CategoryValidatior();
+            CategoryValidatior cv = new CategoryValidatior();
             ValidationResult results = cv.Validate(p);
             if (results.IsValid)
             {
@@ -42,15 +42,27 @@ namespace MyBlogWebsite.Controllers
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
-           return View();
+            return View();
         }
-       
+
         public ActionResult DeleteCategory(int id)
         {
-            var categoryvalue=cm.GetById(id);
+            var categoryvalue = cm.GetById(id);
             cm.CategoryRemove(categoryvalue);
             return RedirectToAction("Index");
         }
-      
+        [HttpGet]
+        public ActionResult UpdateCategory(int id)
+        {
+            var categoryvalue = cm.GetById(id);
+            return View(categoryvalue);
+        }
+        [HttpPost]
+        public ActionResult UpdateCategory(Category p)
+        {
+            cm.CategoryUpdate(p);
+            return RedirectToAction("Index");
+
+        }
     }
 }

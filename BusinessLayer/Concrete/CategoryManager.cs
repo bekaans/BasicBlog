@@ -38,5 +38,9 @@ namespace BusinessLayer.Concrete
         {
             _icategorydal.Delete(category);
         }
+        public void CategoryUpdate(Category category)
+        {
+            _icategorydal.Update(category);
+        }
     }
 }
