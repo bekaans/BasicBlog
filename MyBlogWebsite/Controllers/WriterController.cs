@@ -6,6 +6,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BusinessLayer;
+using EntityLayer.Conctrete;
+using BusinessLayer.ValidationRules;
+using FluentValidation.Results;
+
 namespace MyBlogWebsite.Controllers
 {
     public class WriterController : Controller
@@ -16,6 +20,30 @@ namespace MyBlogWebsite.Controllers
         {
             var writervalues = wm.GetList();
             return View(writervalues);
+        }
+        [HttpGet]
+        public ActionResult AddWriter()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddWriter(Writer p) 
+        {
+            WriterValidator writerValidator = new WriterValidator();
+            ValidationResult results = writerValidator.Validate(p);
+            if (results.IsValid)
+            {
+                wm.WriterAdd(p);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }
