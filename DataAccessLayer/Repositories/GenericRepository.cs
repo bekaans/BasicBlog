@@ -23,6 +23,8 @@ namespace DataAccessLayer.Repositories
         }
         public void Delete(T p)
         {
+            var deletedEntity = c.Entry(p);
+            deletedEntity.State = EntityState.Deleted;
           _object.Remove(p);
             c.SaveChanges();
         }
