@@ -13,3 +13,5 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLa
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_update.resources
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
