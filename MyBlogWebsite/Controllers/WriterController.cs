@@ -9,6 +9,7 @@ using BusinessLayer;
 using EntityLayer.Conctrete;
 using BusinessLayer.ValidationRules;
 using FluentValidation.Results;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MyBlogWebsite.Controllers
 {
@@ -43,7 +44,21 @@ namespace MyBlogWebsite.Controllers
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
+            
             return View();
+        }
+        [HttpGet]
+        public ActionResult UpdateWriter(int id) 
+        {
+            var writervalue = wm.GetByID(id);
+            return View(writervalue);
+        }
+        [HttpPost]
+        public ActionResult UpdateWriter(Writer p)
+        {
+            wm.WriterUpdate(p);
+            return RedirectToAction("Index");
+
         }
     }
 }
