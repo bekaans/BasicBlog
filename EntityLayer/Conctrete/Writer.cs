@@ -29,6 +29,9 @@ namespace EntityLayer.Conctrete
 
         [StringLength(200)]
         public string WriterPassword { get; set; }
+
+        [StringLength(50)]
+        public string WriterTittle { get; set; }
         [StringLength(200)]
         public string WriterInfo { get; set; }
 
