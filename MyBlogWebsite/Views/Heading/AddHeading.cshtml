@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Conctrete.Heading
+
+@{
+    ViewBag.Title = "AddHeading";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+<h2>AddHeading</h2>
+
+
+<br />
+
+@using (Html.BeginForm("AddHeading", "Heading", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Heading Name")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.HeadingName)
+        <br />
+        <br />
+        @Html.Label("Category")
+        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CategoryID)
+        <br />
+        <br />
+        @Html.Label("Writer")
+        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterID)
+        <br />
+        <br />
+        <button class="btn btn-success">Send</button>
+    </div>
+}
+
