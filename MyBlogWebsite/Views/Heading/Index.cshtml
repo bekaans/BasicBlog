@@ -1,5 +1,6 @@
-﻿@model EntityLayer.Conctrete.Heading
-    @model List<EntityLayer.Conctrete.Heading>
+﻿@using EntityLayer.Conctrete
+ @model List<Heading>
+   
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Adminlayout.cshtml";
@@ -12,16 +13,15 @@
        <th>ID</th>
        <th>Heading</th>
        <th>Category</th>
-       <th>Heading Date</th>
-       
    </tr>
-    @foreach (var item in Model)
+    @foreach(var item in Model)
     {
         <tr>
             <td>@item.HeadingID</td>
             <td>@item.HeadingName</td>
             <td>@item.Category.CategoryName</td>
-            <td>@item.HeadingDate</td>
         </tr>
     }
 </table>
+<br />
+<a href="/Heading/AddHeading/" class="btn btn-info">Add Heading</a>
