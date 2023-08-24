@@ -19,8 +19,7 @@
         <br />
         <br />
         @Html.Label("Category")
-        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.CategoryID)
+        @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.vlc , new {@class="form-control"})
         <br />
         <br />
         @Html.Label("Writer")
