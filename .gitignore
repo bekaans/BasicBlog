@@ -69,3 +69,4 @@ DataAccessLayer/Repositories/GenericRepository.cs
 .vs/MyBlogWebsite/FileContentIndex/fe058579-90e6-4ddc-be80-5d6b2b9f6774.vsidx
 .vs/MyBlogWebsite/FileContentIndex/0abfc065-4c52-4262-ac51-87d772db0e24.vsidx
 .vs/MyBlogWebsite/FileContentIndex/37115385-9630-416a-ab62-83b708e20dba.vsidx
+DataAccessLayer/Migrations/202308251435244_addwriterstatus.cs

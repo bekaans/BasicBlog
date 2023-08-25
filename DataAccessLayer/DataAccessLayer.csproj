@@ -73,6 +73,14 @@
     <Compile Include="Migrations\202308232031077_mig-addwritertittle.designer.cs">
       <DependentUpon>202308232031077_mig-addwritertittle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308251421102_image_change.cs" />
+    <Compile Include="Migrations\202308251421102_image_change.designer.cs">
+      <DependentUpon>202308251421102_image_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308251435244_addwriterstatus.cs" />
+    <Compile Include="Migrations\202308251435244_addwriterstatus.designer.cs">
+      <DependentUpon>202308251435244_addwriterstatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
@@ -88,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308232031077_mig-addwritertittle.resx">
       <DependentUpon>202308232031077_mig-addwritertittle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308251421102_image_change.resx">
+      <DependentUpon>202308251421102_image_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308251435244_addwriterstatus.resx">
+      <DependentUpon>202308251435244_addwriterstatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

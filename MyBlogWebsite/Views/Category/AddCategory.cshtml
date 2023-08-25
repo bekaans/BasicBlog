@@ -2,21 +2,21 @@
 @{
     Layout = null;
 }
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
 @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
-            {
+            {<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
                 <div class="form-group">
-                    @Html.Label("Category Name")
-                    @Html.TextBoxFor(x=>x.CategoryName)
+                    @Html.Label("Category Name", new {@class="form-control"})
+                    @Html.TextBoxFor(x=>x.CategoryName, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x=>x.CategoryName)
                     <br />
                     <br />
-                    @Html.Label("Enter The Discription")
-                    @Html.TextBoxFor(x=>x.CategoryDescription)
-                    @Html.ValidationMessageFor(x=>x.CategoryDescription)
+                    @Html.Label("Enter The Discription", new { @class = "form-control" })
+                    @Html.TextBoxFor(x=>x.CategoryDescription, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x=>x.CategoryDescription )
                     <br />
                     <br />
-                    <button>Kaydet</button>
+                    <button class="btn btn-success">Kaydet</button>
                 </div>
             } 
 
