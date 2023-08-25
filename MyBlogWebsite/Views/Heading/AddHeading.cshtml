@@ -19,12 +19,12 @@
         <br />
         <br />
         @Html.Label("Category")
-        @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.vlc , new {@class="form-control"})
+        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
         <br />
         <br />
         @Html.Label("Writer")
-        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterID)
+        @Html.DropDownListFor(x => x.Writer.WriterName, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+       
         <br />
         <br />
         <button class="btn btn-success">Send</button>

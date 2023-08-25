@@ -21,7 +21,7 @@ namespace EntityLayer.Conctrete
         [StringLength(50)]
         public string WriterSurname { get; set; }
 
-        [StringLength(50)]
+        [StringLength(250)]
         public string WriterImage { get; set; }
 
         [StringLength(200)]
@@ -34,6 +34,8 @@ namespace EntityLayer.Conctrete
         public string WriterTittle { get; set; }
         [StringLength(200)]
         public string WriterInfo { get; set; }
+
+        public bool WriterStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
         public ICollection<Content> Contents { get; set; }
