@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Conctrete;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,13 @@ namespace BusinessLayer.Concrete
     public class ContentManager : IContentService
     {
         IContentDAL _icontentdal;
+     
+
+        public ContentManager(IContentDAL contentDAL)
+        {
+            contentDAL = _icontentdal;
+        }
+
         public void ContentAdd(Content content)
         {
            _icontentdal.Insert(content);
@@ -32,12 +40,12 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Content> GetList(int id)
+        public List<Content> GetList()
         {
             throw new NotImplementedException();
         }
 
-        public List<Content> GetListByID(int id)
+        public List<Content> GetListByHeadingID(int id)
         {
            return _icontentdal.List(x => x.HeadingID == id);
         }
