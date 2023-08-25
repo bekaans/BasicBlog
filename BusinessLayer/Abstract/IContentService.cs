@@ -14,6 +14,6 @@ namespace BusinessLayer.Abstract
         Content GetById(int id);
         void ContentRemove(Content content);
         void ContentUpdate(Content content);
-        List<Content> GetListByID(int id);
+        List<Content> GetListByHeadingID(int id);
     }
 }
