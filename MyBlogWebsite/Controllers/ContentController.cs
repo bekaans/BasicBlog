@@ -13,5 +13,9 @@ namespace MyBlogWebsite.Controllers
         {
             return View();
         }
+        public ActionResult ContentByHeading()
+        {
+            return View();
+        }
     }
 }
