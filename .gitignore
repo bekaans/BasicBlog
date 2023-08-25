@@ -72,3 +72,4 @@ DataAccessLayer/Repositories/GenericRepository.cs
 DataAccessLayer/Migrations/202308251435244_addwriterstatus.cs
 .vs/MyBlogWebsite/FileContentIndex/913e8066-b19d-422e-8f10-89fc5414f4e0.vsidx
 BusinessLayer/obj/Debug/BusinessLayer.csproj.AssemblyReference.cache
+.vs/MyBlogWebsite/FileContentIndex/14cb9ef1-f24a-49df-84a5-3351661e3e21.vsidx
