@@ -1,34 +1,27 @@
-﻿
+﻿@using EntityLayer.Conctrete
+@model List<About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Adminlayout.cshtml";
 }
 
-<h2>Index</h2>
-<button class="btn btn-primary"data-toggle="modal" data-target="#modal1">New About</button>
-<div class="modal"id="modal1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">About Write Entry</h2>
-            </div>
-            <form method="post" action="#">
-                <div class="modal-body">
-                    <label>About First Entry</label>
-                    <input type="text" name="#" class="form-control" />
-                    <br />
-                    <label>About Second Entry</label>
-                    <input type="text" name="#" class="form-control" />
-                    <br />
-                    <label>About Image 1</label>
-                    <input type="text" name="#" class="form-control" />
-                    <br />
-                    <label>About Image 2</label>
-                    <input type="text" name="#" class="form-control" />
-                    <br />
-                    <button class="btn btn-info">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+<h2>About</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>About Heading</th>
+        <th>About Online</th>
+        <th>About Offline</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AboutID</td>
+            <td>About Heading</td>
+            <td><a href="#" class="btn btn-success">Make Online</a></td>
+            <td><a href="#" class="btn btn-danger">Make Offline</a></td>
+        </tr>
+    }
+</table>
+
+@Html.Action("AboutPartial","About")

@@ -13,6 +13,8 @@ namespace BusinessLayer.Concrete
     {
         IAboutDAL _iaboutdal;
 
+       
+
         public AboutManager(IAboutDAL iaboutdal)
         {
             _iaboutdal = iaboutdal;
