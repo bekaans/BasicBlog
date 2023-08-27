@@ -41,9 +41,14 @@
                             <th style="width: 20%">
                                 Heading Name
                             </th>
-                            <th style="width: 30%">
+
+                            <th style="width: 10%">
                                 Writer
                             </th>
+                            <th style="width: 10%">
+                                Status
+                            </th>
+
                             <th style="width: 8%" class="text-center">
                                 Category
                             </th>
@@ -62,11 +67,11 @@
                             </td>
                             <td>
                                 <a>
-                                  @item.HeadingName
+                                    @item.HeadingName
                                 </a>
                                 <br />
                                 <small>
-                                @((DateTime)item.HeadingDate)
+                                    @((DateTime)item.HeadingDate)
                                 </small>
                             </td>
                             <td>
@@ -76,6 +81,19 @@
                                     </li>
                                 </ul>
                             </td>
+                            @if (item.HeadingStatus == true)
+                            {
+                                <td class="badge btn-success">
+                                    @item.HeadingStatus
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="badge btn-danger">
+                                    @item.HeadingStatus
+                                </td>
+                            }
+
                             <td class="project-state">
                                 <span class="badge badge-success">@item.Category.CategoryName</span>
                             </td>
@@ -90,7 +108,7 @@
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

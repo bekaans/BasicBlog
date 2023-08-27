@@ -62,6 +62,19 @@ namespace MyBlogWebsite.Controllers
             var headingvalue = hm.GetById(id);
             return View(headingvalue);
         }
+        [HttpPost]
+        public ActionResult UpdateHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteHeading(int id) 
+        {   
+            var headingvalue=hm.GetById(id);
+            hm.HeadingRemove(headingvalue);
+            return RedirectToAction("Index");
+           
+        }
        
     }
 }
