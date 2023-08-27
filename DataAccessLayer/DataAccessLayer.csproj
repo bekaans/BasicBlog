@@ -81,6 +81,14 @@
     <Compile Include="Migrations\202308251435244_addwriterstatus.designer.cs">
       <DependentUpon>202308251435244_addwriterstatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308271459000_addcontentstatus.cs" />
+    <Compile Include="Migrations\202308271459000_addcontentstatus.designer.cs">
+      <DependentUpon>202308271459000_addcontentstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308271502287_addHeadingStatus.cs" />
+    <Compile Include="Migrations\202308271502287_addHeadingStatus.designer.cs">
+      <DependentUpon>202308271502287_addHeadingStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
@@ -102,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308251435244_addwriterstatus.resx">
       <DependentUpon>202308251435244_addwriterstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308271459000_addcontentstatus.resx">
+      <DependentUpon>202308271459000_addcontentstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308271502287_addHeadingStatus.resx">
+      <DependentUpon>202308271502287_addHeadingStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

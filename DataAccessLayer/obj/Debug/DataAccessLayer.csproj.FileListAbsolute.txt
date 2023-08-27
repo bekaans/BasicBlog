@@ -18,3 +18,5 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLa
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migaddwritertittle.resources
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.image_change.resources
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addwriterstatus.resources
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addcontentstatus.resources
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addHeadingStatus.resources
