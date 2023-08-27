@@ -21,25 +21,25 @@ namespace MyBlogWebsite.Controllers
             return View(headingvalues);
         }
         [HttpGet]
-        public ActionResult AddHeading() 
-        {   List<SelectListItem> valuecategory =(from x in cm.GetList()
-                                                 select new SelectListItem 
-                                                 {
-                                                     Text=x.CategoryName,
-                                                     Value=x.CategoryID.ToString(),
-                                                 }
+        public ActionResult AddHeading()
+        { List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.CategoryName,
+                                                    Value = x.CategoryID.ToString(),
+                                                }
                                                  ).ToList();
-            ViewBag.vlc=valuecategory;
+            ViewBag.vlc = valuecategory;
             List<SelectListItem> valuewriter = (from x in wm.GetList()
-                                                  select new SelectListItem
-                                                  {
-                                                      Text = x.WriterName,
-                                                      Value = x.WriterID.ToString(),
-                                                  }
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.WriterName,
+                                                    Value = x.WriterID.ToString(),
+                                                }
                                                 ).ToList();
             ViewBag.vlc = valuewriter;
 
-            return View(); 
+            return View();
         }
         [HttpPost]
         public ActionResult AddHeading(Heading p)
@@ -48,9 +48,20 @@ namespace MyBlogWebsite.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
-        public ActionResult ContentByHeading()
+        [HttpGet]
+        public ActionResult UpdateHeading(int id)
         {
-            return View();
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString(),
+                                                  }
+                                                ).ToList();
+            ViewBag.vlc = valuecategory;
+            var headingvalue = hm.GetById(id);
+            return View(headingvalue);
         }
+       
     }
 }
