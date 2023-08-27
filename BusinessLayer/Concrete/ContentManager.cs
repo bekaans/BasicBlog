@@ -17,7 +17,7 @@ namespace BusinessLayer.Concrete
 
         public ContentManager(IContentDAL contentDAL)
         {
-            contentDAL = _icontentdal;
+            _icontentdal = contentDAL;
         }
 
         public void ContentAdd(Content content)
