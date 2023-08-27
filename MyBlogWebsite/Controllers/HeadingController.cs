@@ -71,6 +71,7 @@ namespace MyBlogWebsite.Controllers
         public ActionResult DeleteHeading(int id) 
         {   
             var headingvalue=hm.GetById(id);
+            headingvalue.HeadingStatus = false;
             hm.HeadingRemove(headingvalue);
             return RedirectToAction("Index");
            
