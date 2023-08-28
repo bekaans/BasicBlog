@@ -89,6 +89,10 @@
     <Compile Include="Migrations\202308271502287_addHeadingStatus.designer.cs">
       <DependentUpon>202308271502287_addHeadingStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308281212035_mig_add_messageclass.cs" />
+    <Compile Include="Migrations\202308281212035_mig_add_messageclass.designer.cs">
+      <DependentUpon>202308281212035_mig_add_messageclass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308271502287_addHeadingStatus.resx">
       <DependentUpon>202308271502287_addHeadingStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308281212035_mig_add_messageclass.resx">
+      <DependentUpon>202308281212035_mig_add_messageclass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
