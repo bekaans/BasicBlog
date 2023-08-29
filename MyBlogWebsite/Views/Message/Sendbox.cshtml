@@ -5,16 +5,12 @@
     Layout = "~/Views/Shared/_Adminlayout.cshtml";
 }
 
-<h2>Sendbox</h2>
+
 
 <!DOCTYPE html>
 <html>
 
 <body class="hold-transition sidebar-mini">
-
-    <!-- Content Wrapper. Contains page content -->
-    <!-- Content Header (Page header) -->
-    <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -28,7 +24,7 @@
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
 
     <section class="content">
@@ -89,8 +85,8 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Contact/getContactDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contact/getContactDetails/@item.MessageID">@item.MessageReceiver</a></td>
+                                            <td class="mailbox-star"><a href="/Message/GetInboxDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetInboxDetails/@item.MessageID">@item.MessageReceiver</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.MessageSubject</b> - @item.MessageContent.Substring(0, 30)...
 

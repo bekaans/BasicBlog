@@ -34,7 +34,7 @@ namespace MyBlogWebsite.Controllers
         {
             return View();
         }
-        public ActionResult GetInboxDeatils(int id)
+        public ActionResult GetInboxDetails(int id)
         {
             var value = mm.GetById(id);
             return View(value);

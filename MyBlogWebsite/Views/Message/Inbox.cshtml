@@ -11,10 +11,6 @@
 <html>
 
 <body class="hold-transition sidebar-mini">
-
-    <!-- Content Wrapper. Contains page content -->
-    <!-- Content Header (Page header) -->
-    <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -23,12 +19,12 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/Message/Inbox/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">Inbox</li>
                     </ol>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
 
     <section class="content">
@@ -92,7 +88,7 @@
                                             <td class="mailbox-star"><a href="/Message/GetInboxDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
                                             <td class="mailbox-name"><a href="/Message/GetInboxDetails/@item.MessageID">@item.MessageSender</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@item.MessageSubject</b> - @item.MessageContent.Substring(0, 30)...
+                                                <b>@item.MessageSubject</b> - @item.MessageContent.Substring(0,10).Length
 
                                             </td>
                                             <td class="mailbox-attachment"></td>
