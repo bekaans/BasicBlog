@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Adminlayout.cshtml";
 }
 
-<h2>Inbox</h2>
+
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/Message/Inbox/">Home</a></li>
                         <li class="breadcrumb-item active">Inbox</li>
                     </ol>
                 </div>
@@ -89,8 +89,8 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Contact/getContactDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contact/getContactDetails/@item.MessageID">@item.MessageSender</a></td>
+                                            <td class="mailbox-star"><a href="/Message/GetInboxDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetInboxDetails/@item.MessageID">@item.MessageSender</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.MessageSubject</b> - @item.MessageContent.Substring(0, 30)...
 
