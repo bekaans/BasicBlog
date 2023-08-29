@@ -34,5 +34,10 @@ namespace MyBlogWebsite.Controllers
         {
             return View();
         }
+        public ActionResult GetInboxDeatils(int id)
+        {
+            var value = mm.GetById(id);
+            return View(value);
+        }
     }
 }
