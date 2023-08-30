@@ -39,5 +39,10 @@ namespace MyBlogWebsite.Controllers
             var value = mm.GetById(id);
             return View(value);
         }
+        public ActionResult GetSendboxDetails(int id)
+        {
+            var value = mm.GetById(id);
+            return View(value);
+        }
     }
 }
