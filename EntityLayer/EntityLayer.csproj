@@ -56,6 +56,7 @@
     <Compile Include="Conctrete\Contact.cs" />
     <Compile Include="Conctrete\Content.cs" />
     <Compile Include="Conctrete\Heading.cs" />
+    <Compile Include="Conctrete\ImageFile.cs" />
     <Compile Include="Conctrete\Message.cs" />
     <Compile Include="Conctrete\Writer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
