@@ -33,7 +33,7 @@ namespace MyBlogWebsite.Controllers
                 return View();
         }
         [HttpPost]
-        public ActionResult NewMessage(Message p)
+        public ActionResult NewMessage (Message p)
         {
 
             ValidationResult results = messageValidator.Validate(p);
