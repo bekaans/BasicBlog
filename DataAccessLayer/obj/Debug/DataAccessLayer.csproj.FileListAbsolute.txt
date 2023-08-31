@@ -23,3 +23,4 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLa
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_messageclass.resources
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addcontactdate.resources
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.createimagefile.resources
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addadmin.resources

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conctrete\About.cs" />
+    <Compile Include="Conctrete\Admin.cs" />
     <Compile Include="Conctrete\Category.cs" />
     <Compile Include="Conctrete\Contact.cs" />
     <Compile Include="Conctrete\Content.cs" />
