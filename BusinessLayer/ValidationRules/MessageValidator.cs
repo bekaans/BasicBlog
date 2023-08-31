@@ -12,12 +12,12 @@ namespace BusinessLayer.ValidationRules
     {
         public MessageValidator()
         {
-        RuleFor(x => x.MessageReceiver).NotEmpty().WithMessage("Do Not Pass Category Name Empty");
-        RuleFor(x => x.MessageSender).NotEmpty().WithMessage("Do Not Pass Category Name Empty");
-        RuleFor(x => x.MessageContent).NotEmpty().WithMessage("Do Not Pass Category Description Empty");
+        RuleFor(x => x.MessageReceiver).NotEmpty().WithMessage("Do Not Pass Receiver Name Empty");
+        RuleFor(x => x.MessageSender).NotEmpty().WithMessage("Do Not Pass Sender Name Empty");
+        RuleFor(x => x.MessageContent).NotEmpty().WithMessage("Do Not Pass Content Empty");
         RuleFor(x => x.MessageSender).MinimumLength(3).WithMessage("Minimum 3 charachter");
         RuleFor(x => x.MessageReceiver).MinimumLength(3).WithMessage("Minimum 3 charachter");
-        RuleFor(x => x.MessageSender).MaximumLength(20).WithMessage("Maximum 20 charachter");
+        RuleFor(x => x.MessageSender).MaximumLength(50).WithMessage("Maximum 20 charachter");
         RuleFor(x => x.MessageReceiver).MaximumLength(20).WithMessage("Maximum 20 charachter");
         }
         
