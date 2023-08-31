@@ -13,10 +13,13 @@ namespace MyBlogWebsite.Controllers
 {
     public class AdminCategoryController : Controller
     {
+   
         // GET: AdminCategory
         CategoryManager cm = new CategoryManager(new EFCategoryDAL());
+        [Authorize]
         public ActionResult Index()
         {
+          
             var categoryvalues = cm.GetList();
             return View(categoryvalues);
         }

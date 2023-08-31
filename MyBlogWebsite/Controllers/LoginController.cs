@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Web.Security;
 namespace MyBlogWebsite.Controllers
 {
     public class LoginController : Controller
@@ -23,6 +23,8 @@ namespace MyBlogWebsite.Controllers
             var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUsername == p.AdminUsername && x.AdminPassword == p.AdminPassword);
             if (adminuserinfo != null)
             {
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUsername, false);
+                Session["AdminUsername"] = adminuserinfo.AdminUsername;
                 return RedirectToAction("Index", "AdminCategory");
             }
             else

@@ -17,6 +17,7 @@ namespace MyBlogWebsite.Controllers
         MessageValidator messageValidator = new MessageValidator();
 
         // GET: Message
+        [Authorize]
         public ActionResult Inbox()
         {
             var messagelist = mm.GetListInbox();
