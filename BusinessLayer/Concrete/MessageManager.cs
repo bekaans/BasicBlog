@@ -41,12 +41,12 @@ namespace BusinessLayer.Concrete
 
         public void MessageRemove(Message message)
         {
-            throw new NotImplementedException();
+           _imessagedal.Delete(message);
         }
 
         public void MessageUpdate(Message message)
         {
-            throw new NotImplementedException();
+           _imessagedal.Update(message);
         }
     }
 }
