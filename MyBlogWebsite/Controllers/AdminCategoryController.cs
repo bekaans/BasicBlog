@@ -16,7 +16,7 @@ namespace MyBlogWebsite.Controllers
    
         // GET: AdminCategory
         CategoryManager cm = new CategoryManager(new EFCategoryDAL());
-        [Authorize]
+        [Authorize(Roles ="B")]
         public ActionResult Index()
         {
           
