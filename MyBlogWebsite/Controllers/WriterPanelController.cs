@@ -46,5 +46,33 @@ namespace MyBlogWebsite.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("MyHeading");
         }
+        [HttpGet]
+        public ActionResult UpdateHeading(int id)
+        {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString(),
+                                                  }
+                                                ).ToList();
+            ViewBag.vlc = valuecategory;
+            var headingvalue = hm.GetById(id);
+            return View(headingvalue);
+        }
+        [HttpPost]
+        public ActionResult UpdateHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("MyHeading");
+        }
+        public ActionResult DeleteHeading(int id)
+        {
+            var headingvalue = hm.GetById(id);
+            headingvalue.HeadingStatus = false;
+            hm.HeadingRemove(headingvalue);
+            return RedirectToAction("MyHeading");
+
+        }
     }
 }
