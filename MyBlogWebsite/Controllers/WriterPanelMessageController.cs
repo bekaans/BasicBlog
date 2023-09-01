@@ -28,5 +28,15 @@ namespace MyBlogWebsite.Controllers
             var messagelist = mm.GetListSendBox();
             return View(messagelist);
         }
+        public ActionResult GetInboxDetails(int id)
+        {
+            var value = mm.GetById(id);
+            return View(value);
+        }
+        public ActionResult GetSendboxDetails(int id)
+        {
+            var value = mm.GetById(id);
+            return View(value);
+        }
     }
 }
