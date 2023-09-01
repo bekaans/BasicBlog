@@ -90,3 +90,4 @@ DataAccessLayer/Migrations/202308311810054_createimagefile.cs
 DataAccessLayer/obj/Debug/DataAccessLayer.Migrations.addadmin.resources
 MyBlogWebsite/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 MyBlogWebsite/Controllers/AdminCategoryController.cs
+.vs/MyBlogWebsite/FileContentIndex/70f87702-e028-4242-8b1f-5036d504ec5a.vsidx
