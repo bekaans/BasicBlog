@@ -51,6 +51,7 @@ namespace MyBlogWebsite.Controllers
             ValidationResult results = messageValidator.Validate(p);
             if (results.IsValid)
             {
+                p.MessageSender = "eda54";
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.MessageAdd(p);
                 return RedirectToAction("Sendbox");
