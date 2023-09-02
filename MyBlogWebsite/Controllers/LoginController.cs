@@ -46,7 +46,7 @@ namespace MyBlogWebsite.Controllers
             if (writeruserinfo != null)
             {
                 FormsAuthentication.SetAuthCookie(writeruserinfo.WriterUsername, false);
-                Session["AdminUsername"] = writeruserinfo.WriterUsername;
+                Session["WriterUsername"] = writeruserinfo.WriterUsername;
                 return RedirectToAction("MyContent", "WriterPanelContent");
             }
             else
