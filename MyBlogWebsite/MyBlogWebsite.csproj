@@ -2452,6 +2452,7 @@
     <Content Include="Views\WriterPanelMessage\Sendbox.cshtml" />
     <Content Include="Views\WriterPanelMessage\GetInboxDetails.cshtml" />
     <Content Include="Views\WriterPanelMessage\GetSendboxDetails.cshtml" />
+    <Content Include="Views\WriterPanelMessage\NewMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
