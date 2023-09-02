@@ -33,5 +33,27 @@ namespace MyBlogWebsite.Controllers
             }
                 return View();
         }
+        [HttpGet]
+        public ActionResult WriterLogin() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult WriterLogin(Writer p)
+        {
+            Context c = new Context();
+            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterUsername == p.WriterUsername && x.WriterPassword == p.WriterPassword);
+            if (writeruserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterUsername, false);
+                Session["AdminUsername"] = writeruserinfo.WriterUsername;
+                return RedirectToAction("MyContent", "WriterPanelContent");
+            }
+            else
+            {
+                return RedirectToAction("WriterLogin");
+            }
+           
+        }
     }
 }
