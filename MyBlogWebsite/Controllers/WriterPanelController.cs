@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Conctrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Conctrete;
 using System;
@@ -9,8 +10,10 @@ using System.Web.Mvc;
 
 namespace MyBlogWebsite.Controllers
 {
+     
     public class WriterPanelController : Controller
-    {
+    { 
+     
         HeadingManager hm = new HeadingManager(new EFHeadingDAL());
         CategoryManager cm = new CategoryManager(new EFCategoryDAL());
         // GET: WriterPanel
@@ -18,9 +21,12 @@ namespace MyBlogWebsite.Controllers
         {
             return View();
         }
-        public ActionResult MyHeading()
-        {
-            var values = hm.GetListByWriter();
+        public ActionResult MyHeading(string p)
+        {   
+            Context c = new Context();
+            p = (string)Session["WriterUsername"];
+            var writerheadingvalues = c.Writers.Where(x=>x.WriterUsername==p).Select(y=>y.WriterID).FirstOrDefault();
+            var values = hm.GetListByWriter(writerheadingvalues);
             return View(values);
         }
         [HttpGet]

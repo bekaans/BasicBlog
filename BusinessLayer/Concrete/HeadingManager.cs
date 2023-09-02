@@ -42,9 +42,11 @@ namespace BusinessLayer.Concrete
 
         }
 
-        public List<Heading> GetListByWriter()
+        public List<Heading> GetListByWriter(int id)
         {
-            return _iheadingdal.List(x => x.WriterID == 16);
+            return _iheadingdal.List(x => x.WriterID == id);
         }
+
+     
     }
 }
