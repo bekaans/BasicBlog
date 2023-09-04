@@ -46,9 +46,6 @@ namespace BusinessLayer.Concrete
             _iwriterDAL.Update(writer);
         }
 
-        public void WriterUpdate()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

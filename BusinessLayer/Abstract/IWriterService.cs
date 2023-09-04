@@ -12,7 +12,7 @@ namespace BusinessLayer.Abstract
         List<Writer> GetList();
         void WriterAdd(Writer writer);
         void WriterRemove(Writer writer);
-        void WriterUpdate();
+        void WriterUpdate(Writer writer);
         Writer GetByID(int id);
 
         
