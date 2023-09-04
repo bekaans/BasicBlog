@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Conctrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Conctrete;
 using FluentValidation.Results;
@@ -15,10 +16,12 @@ namespace MyBlogWebsite.Controllers
     {
         MessageManager mm = new MessageManager(new EFMessageDAL());
         MessageValidator messageValidator = new MessageValidator();
+        Context c = new Context();  
         // GET: WriterPanelMessage
         public ActionResult Inbox()
         {
-            var messagelist = mm.GetListInbox();
+            string receiver = (string)Session["WriterMail"];
+            var messagelist = mm.GetListInbox(receiver);
             return View(messagelist);
         }
         public PartialViewResult MessageListMenu()
@@ -27,7 +30,8 @@ namespace MyBlogWebsite.Controllers
         }
         public ActionResult Sendbox()
         {
-            var messagelist = mm.GetListSendBox();
+            string sender = (string)Session["WriterMail"];
+            var messagelist = mm.GetListSendBox(sender);
             return View(messagelist);
         }
         public ActionResult GetInboxDetails(int id)
@@ -47,11 +51,11 @@ namespace MyBlogWebsite.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {
-
+            string sender = (string)Session["WriterMail"];
             ValidationResult results = messageValidator.Validate(p);
             if (results.IsValid)
             {
-                p.MessageSender = "eda54";
+                p.MessageSender = sender;
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.MessageAdd(p);
                 return RedirectToAction("Sendbox");

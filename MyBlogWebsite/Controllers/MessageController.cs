@@ -17,15 +17,15 @@ namespace MyBlogWebsite.Controllers
         MessageValidator messageValidator = new MessageValidator();
 
         // GET: Message
-        [Authorize]
-        public ActionResult Inbox()
+     
+        public ActionResult Inbox(string p)
         {
-            var messagelist = mm.GetListInbox();
+            var messagelist = mm.GetListInbox(p);
             return View(messagelist);
         }
-        public ActionResult Sendbox() 
+        public ActionResult Sendbox(string p) 
         {
-            var messagelist = mm.GetListSendBox();
+            var messagelist = mm.GetListSendBox(p);
             return View(messagelist);
         }
         [HttpGet]
