@@ -20,12 +20,12 @@
 
 
                                 <div class="time-label">
-                                    <span class="bg-success">@(((DateTime)item.ContentDate).ToString())</span>
+                                    <span class="bg-success"> @item.Writer.WriterUsername</span>
                                 </div>
                                 <div>
                                     <i class="fas fa-comment bg-yellow"></i>
                                     <div class="timeline-item">
-                                        <h3 class="timeline-header"><a href="#">@item.Heading.HeadingName </a> </h3>
+                                        <h3 class="timeline-header"><a href="#">@item.Heading.HeadingName - @(((DateTime)item.ContentDate).ToString())  </a> </h3>
                                         <div class="timeline-body">
                                             @item.ContentValue
                                         </div>

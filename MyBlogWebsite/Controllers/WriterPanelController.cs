@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace MyBlogWebsite.Controllers
 {
-     
+   
     public class WriterPanelController : Controller
     {
        
@@ -86,6 +86,11 @@ namespace MyBlogWebsite.Controllers
             hm.HeadingRemove(headingvalue);
             return RedirectToAction("MyHeading");
 
+        }
+        public ActionResult AllHeadings()
+        {
+            var headings = hm.GetList();
+            return View(headings);
         }
     }
 }
