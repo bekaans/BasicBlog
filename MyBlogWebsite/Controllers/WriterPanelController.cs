@@ -12,10 +12,11 @@ namespace MyBlogWebsite.Controllers
 {
      
     public class WriterPanelController : Controller
-    { 
-     
+    {
+       
         HeadingManager hm = new HeadingManager(new EFHeadingDAL());
         CategoryManager cm = new CategoryManager(new EFCategoryDAL());
+        int id;
         // GET: WriterPanel
         public ActionResult WriterProfile()
         {
@@ -25,13 +26,17 @@ namespace MyBlogWebsite.Controllers
         {   
             Context c = new Context();
             p = (string)Session["WriterUsername"];
-            var writerheadingvalues = c.Writers.Where(x=>x.WriterUsername==p).Select(y=>y.WriterID).FirstOrDefault();
+           
+           var writerheadingvalues = c.Writers.Where(x=>x.WriterUsername==p).Select(y=>y.WriterID).FirstOrDefault();
             var values = hm.GetListByWriter(writerheadingvalues);
             return View(values);
         }
         [HttpGet]
         public ActionResult NewHeading()
         {
+            string writeridinfo = (string)Session["WriterUsername"];
+            var writerheadingvalues = c.Writers.Where(x => x.WriterUsername == writeridinfo).Select(y => y.WriterID).FirstOrDefault();
+
             List<SelectListItem> valuecategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
@@ -46,8 +51,9 @@ namespace MyBlogWebsite.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
+            ViewBag.d = id;
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.WriterID = 16;
+            p.WriterID = 0;
             p.HeadingStatus = true;
             hm.HeadingAdd(p);
             return RedirectToAction("MyHeading");
