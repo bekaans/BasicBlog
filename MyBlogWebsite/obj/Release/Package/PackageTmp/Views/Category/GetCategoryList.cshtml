@@ -1,0 +1,31 @@
+﻿
+
+@using EntityLayer.Conctrete
+@model List<Category>
+
+
+
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Information</th>
+        <th>Status</th>
+    </tr>
+    @foreach(var category in Model)
+            {
+                <tr>
+                    <td>@category.CategoryID</td>
+                    <td>@category.CategoryName</td>
+                    <td>@category.CategoryDescription</td>
+                    <td>@category.CategoryStatus</td>
+                </tr>
+            }
+</table>
+<a href="~/Views/Category/AddCategory.cshtml"<button class="btn btn-info">Add Category</button>

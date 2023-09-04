@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Conctrete
+@model List<Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>User Mail</th>
+        <th>Authorizition</th>
+        <th>Status</th>
+        <th>Change author</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AdminID</td>
+            <td>@item.AdminUsername</td>
+            <td>@item.AdminRole</td>
+            <td>On</td>
+
+            <td><a href="/AdminCategory/DeleteCategory/@item.AdminID" class="btn btn-danger">Admin Off</a></td>
+            <td><a href="/AdminCategory/UpdateCategory/@item.AdminID" class="btn btn-warning">Change Author</a></td>
+            <td><a href="#" class="btn btn-primary">Header</a></td>
+        </tr>
+    }
+</table>
+<a href="/AdminCategory/AddCategory"<button class="btn btn-info">Add Admin</button>

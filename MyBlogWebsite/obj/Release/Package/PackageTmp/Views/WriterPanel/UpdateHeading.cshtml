@@ -1,0 +1,32 @@
+﻿
+@model EntityLayer.Conctrete.Heading
+
+@{
+    ViewBag.Title = "UpdateHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h2>UpdateHeading</h2>
+@using (Html.BeginForm("UpdateHeading", "Heading", FormMethod.Post))
+{
+    <div class="form-group">
+       
+        @Html.HiddenFor(x => x.HeadingID)
+        @Html.HiddenFor(x => x.HeadingDate)
+        @Html.HiddenFor(x => x.WriterID)
+        <br />
+        <br />
+        @Html.Label("Heading Name")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+        <br />
+        <br />
+   
+        @Html.Label("Category")
+        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        <br />
+
+    </div>
+
+    <button class="btn btn-success">Save</button>
+}
