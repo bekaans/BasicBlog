@@ -16,7 +16,8 @@ namespace MyBlogWebsite.Controllers
        
         HeadingManager hm = new HeadingManager(new EFHeadingDAL());
         CategoryManager cm = new CategoryManager(new EFCategoryDAL());
-        int id;
+        Context c = new Context();
+       
         // GET: WriterPanel
         public ActionResult WriterProfile()
         {
@@ -24,19 +25,16 @@ namespace MyBlogWebsite.Controllers
         }
         public ActionResult MyHeading(string p)
         {   
-            Context c = new Context();
+            
             p = (string)Session["WriterUsername"];
-           
            var writerheadingvalues = c.Writers.Where(x=>x.WriterUsername==p).Select(y=>y.WriterID).FirstOrDefault();
+           
             var values = hm.GetListByWriter(writerheadingvalues);
             return View(values);
         }
         [HttpGet]
         public ActionResult NewHeading()
-        {
-            string writeridinfo = (string)Session["WriterUsername"];
-            var writerheadingvalues = c.Writers.Where(x => x.WriterUsername == writeridinfo).Select(y => y.WriterID).FirstOrDefault();
-
+        {           
             List<SelectListItem> valuecategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
@@ -51,9 +49,11 @@ namespace MyBlogWebsite.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
-            ViewBag.d = id;
+            string writerusernameinfo = (string)Session["WriterUsername"];
+            var writerheadingvalues = c.Writers.Where(x => x.WriterUsername == writerusernameinfo).Select(y => y.WriterID).FirstOrDefault();
+             ViewBag.d=writerheadingvalues;
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.WriterID = 0;
+            p.WriterID = writerheadingvalues;
             p.HeadingStatus = true;
             hm.HeadingAdd(p);
             return RedirectToAction("MyHeading");
@@ -80,6 +80,7 @@ namespace MyBlogWebsite.Controllers
         }
         public ActionResult DeleteHeading(int id)
         {
+
             var headingvalue = hm.GetById(id);
             headingvalue.HeadingStatus = false;
             hm.HeadingRemove(headingvalue);
