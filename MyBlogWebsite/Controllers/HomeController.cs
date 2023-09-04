@@ -26,5 +26,10 @@ namespace MyBlogWebsite.Controllers
 
             return View();
         }
+        [AllowAnonymous]
+        public ActionResult Homepage()
+        {
+            return View();
+        }
     }
 }
