@@ -7,7 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using PagedList;
+using PagedList.Mvc;
 namespace MyBlogWebsite.Controllers
 {
    
@@ -87,9 +88,9 @@ namespace MyBlogWebsite.Controllers
             return RedirectToAction("MyHeading");
 
         }
-        public ActionResult AllHeadings()
+        public ActionResult AllHeadings(int paged=1)
         {
-            var headings = hm.GetList();
+            var headings = hm.GetList().ToPagedList(paged, 4);
             return View(headings);
         }
     }
