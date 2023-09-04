@@ -9,6 +9,9 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
+using BusinessLayer.ValidationRules;
+using FluentValidation.Results;
+
 namespace MyBlogWebsite.Controllers
 {
    
@@ -17,12 +20,42 @@ namespace MyBlogWebsite.Controllers
        
         HeadingManager hm = new HeadingManager(new EFHeadingDAL());
         CategoryManager cm = new CategoryManager(new EFCategoryDAL());
+        WriterManager wm = new WriterManager(new EFWriterDAL());
         Context c = new Context();
-       
+
         // GET: WriterPanel
-        public ActionResult WriterProfile()
+        [HttpGet]
+        public ActionResult WriterProfile(int id=2)
         {
+
+            string p = (string)Session["WriterUsername"];
+           
+            id = c.Writers.Where(x => x.WriterUsername == p).Select(y => y.WriterID).FirstOrDefault();
+            var writervalue = wm.GetByID(id);
+            ViewBag.a = id;
+            return View(writervalue);
+        }
+       
+        [HttpPost]
+        public ActionResult WriterProfile(Writer p)
+        {
+            WriterValidator wv = new WriterValidator(); 
+            ValidationResult results = wv.Validate(p);
+            if (results.IsValid)
+            {
+                wm.WriterUpdate(p);
+                return RedirectToAction("AllHeadings","WriterPanel");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
             return View();
+
         }
         public ActionResult MyHeading(string p)
         {   

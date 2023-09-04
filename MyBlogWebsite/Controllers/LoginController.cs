@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Conctrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Conctrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Conctrete;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,7 @@ namespace MyBlogWebsite.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
-        
+        WriterLoginManager writerlogin = new WriterLoginManager(new EFWriterDAL());
         // GET: Login
         [HttpGet]
         public ActionResult Index()
@@ -45,13 +47,11 @@ namespace MyBlogWebsite.Controllers
 
         public ActionResult WriterLogin(Writer p)
         {
-              
-            Context c = new Context();
-            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterUsername == p.WriterUsername && x.WriterPassword == p.WriterPassword);
-            if (writeruserinfo != null)
+            var writerlogininfo = writerlogin.GetWriter(p.WriterUsername, p.WriterPassword);
+            if (writerlogininfo != null)
             {
-                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterUsername, false);
-                Session["WriterUsername"] = writeruserinfo.WriterUsername;
+                FormsAuthentication.SetAuthCookie(writerlogininfo.WriterUsername, false);
+                Session["WriterUsername"] = writerlogininfo.WriterUsername;
                 return RedirectToAction("MyContent", "WriterPanelContent");
             }
             else
