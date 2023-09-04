@@ -51,7 +51,7 @@ namespace MyBlogWebsite.Controllers
         {
             string writerusernameinfo = (string)Session["WriterUsername"];
             var writerheadingvalues = c.Writers.Where(x => x.WriterUsername == writerusernameinfo).Select(y => y.WriterID).FirstOrDefault();
-             ViewBag.d=writerheadingvalues;
+             
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.WriterID = writerheadingvalues;
             p.HeadingStatus = true;
