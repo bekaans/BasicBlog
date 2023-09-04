@@ -2,9 +2,10 @@
 
 Hi This is my Blog Website and using ;
 
-ASP.NET MVC Code First
+ASP.NET MVC5
+Entity Framework Code First
 OOP
-Solid Design Patterns
-N Layer Architect
+Solid Design Principles
+ Layer Architect
 
 
