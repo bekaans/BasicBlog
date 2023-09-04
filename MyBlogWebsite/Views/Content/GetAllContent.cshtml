@@ -1,0 +1,20 @@
+﻿@using EntityLayer.Conctrete
+@model List<Content>
+@{
+    ViewBag.Title = "GetAllContent";
+    Layout = "~/Views/Shared/_Adminlayout.cshtml";
+}
+
+<h2>GetAllContent</h2>
+
+@using (Html.BeginForm("GetAllContent", "Content", FormMethod.Post))
+            {
+                <p>
+                    Search : @Html.TextBox("p")
+                    <input type="submit" value="Search" />
+                </p>
+            }
+@foreach (var item in Model)
+{
+    <p>@item.ContentValue</p>
+}

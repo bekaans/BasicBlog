@@ -40,9 +40,9 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Content> GetList()
+        public List<Content> GetList(string search)
         {
-            return _icontentdal.List();
+            return _icontentdal.List(x=>x.ContentValue.Contains(search));
         }
 
         public List<Content> GetListByHeadingID(int id)

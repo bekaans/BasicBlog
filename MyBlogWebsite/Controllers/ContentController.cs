@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Conctrete;
 using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,13 @@ namespace MyBlogWebsite.Controllers
         {
             var contentvalues = cm.GetListByHeadingID(id);
             return View(contentvalues);
+        }
+     
+        public ActionResult GetAllContent(string search)
+        {
+
+            var values = cm.GetList(search);
+           return View(values.ToList());
         }
     }
 }
