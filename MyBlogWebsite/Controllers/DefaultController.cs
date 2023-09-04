@@ -14,9 +14,9 @@ namespace MyBlogWebsite.Controllers
         HeadingManager hm = new HeadingManager(new EFHeadingDAL());
         ContentManager cm = new ContentManager(new EFContentDAL());
         // GET: Default
-        public PartialViewResult Index()
+        public PartialViewResult Index(int id=0)
         {
-            var contentlist = cm.GetList();
+            var contentlist = cm.GetListByHeadingID(id);
             return PartialView(contentlist);
         }
         public ActionResult Headings()

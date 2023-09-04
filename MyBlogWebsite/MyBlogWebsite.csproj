@@ -2574,6 +2574,8 @@
     <Content Include="Views\Login\WriterLogin.cshtml" />
     <Content Include="Views\Default\Headings.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\WriterPanel\AllHeadings.cshtml" />
+    <Content Include="Views\WriterPanelContent\AddContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

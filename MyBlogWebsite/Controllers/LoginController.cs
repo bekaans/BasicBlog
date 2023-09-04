@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace MyBlogWebsite.Controllers
 {
-   
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         
