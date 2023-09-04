@@ -96,3 +96,7 @@ C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Threading.Tas
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\FluentValidation.xml
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\PagedList.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\PagedList.Mvc.dll
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\PagedList.xml
+C:\Users\Berke Kaan\Desktop\MyBlogWebsite\MyBlogWebsite\bin\PagedList.Mvc.xml
